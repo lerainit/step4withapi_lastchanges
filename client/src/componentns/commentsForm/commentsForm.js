@@ -5,6 +5,7 @@ import * as yup from 'yup'
 import { addCommentsAC } from "../../store/comments/actionCreators";
 import { setProducts } from "../../store/products/actions";
 import { setCounter } from "../../store/likes/actions";
+import { setComments } from "../../store/comments/actions";
 
 
 
@@ -42,6 +43,7 @@ const CommentsForm = (props) => {
           },
           body: JSON.stringify({ comment:{userIndex:props.userIndex,text: values.comment}, userIndex: props.userIndex })
         }).then(res => res.json())
+        dispatch({ type: setComments })
         dispatch(addCommentsAC({ comment:{userIndex:props.userIndex,text: values.comment}, userIndex: props.userIndex, index: props.index }))
         dispatch({ type: setProducts })
         dispatch({ type: setCounter })
