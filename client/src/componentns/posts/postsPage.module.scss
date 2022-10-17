@@ -1,18 +1,18 @@
 .posts_container{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   position: relative;
 }
 
 
 .posts_img{
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 270px;
 }
 .post_page_container{
     display: flex; 
@@ -24,7 +24,7 @@
 }
 .svg{
      width: 2em; height: 2em;vertical-align: middle;fill: #000;overflow: hidden;
-     position: absolute;top: 380px; left: 110px;
+     position: absolute;top: 370px; left: 50px;
 }
 .posts_span{
     color: #000;
@@ -40,12 +40,12 @@
     height: 100px;
     display: flex;
     justify-content: start;
-    gap:15px;
+    gap:7px;
     align-items: center;
 }
 .comments_container{
     display: flex;
-    gap: 15px;
+    gap: 7px;
     align-items: center;
 }
 .comment_user_name{
