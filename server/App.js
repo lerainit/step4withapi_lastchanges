@@ -7,9 +7,6 @@ import postsRouter from './posts/postsRouter.js'
 import userRouter from "./users/userRouter.js";
 import newPostsRouter from "./newPosts/newPostsRouter.js";
 
-const logger = (req,res,next) =>{
-
-}
 
 const app = express();
 const PORT = 3001;
