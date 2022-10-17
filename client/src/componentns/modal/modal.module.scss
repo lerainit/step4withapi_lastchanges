@@ -73,8 +73,25 @@ border-radius:75px ;
 }
 .svg{
   width: 2em; height: 2em;vertical-align: middle;fill: #000;overflow: hidden;
-  position: absolute;top: 380px; left: 650px;
+  position: absolute;top: 420px; left: 650px;
 }
 .modal_span{
   color: #000;
+}
+.comment_container{
+  width: 400px;
+  height: 100px;
+  display: flex;
+  gap:15px;
+  align-items: center;
+}
+.user_container{
+
+  display: flex;
+}
+.comment_user_img{
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
 }

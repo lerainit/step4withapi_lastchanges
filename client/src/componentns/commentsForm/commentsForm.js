@@ -40,9 +40,9 @@ const CommentsForm = (props) => {
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify({ comment: values.comment, userIndex: props.userIndex })
+          body: JSON.stringify({ comment:{userIndex:props.userIndex,text: values.comment}, userIndex: props.userIndex })
         }).then(res => res.json())
-        dispatch(addCommentsAC({ comment: values.comment, userIndex: props.userIndex, index: props.index }))
+        dispatch(addCommentsAC({ comment:{userIndex:props.userIndex,text: values.comment}, userIndex: props.userIndex, index: props.index }))
         dispatch({ type: setProducts })
         dispatch({ type: setCounter })
 
@@ -67,7 +67,7 @@ const CommentsForm = (props) => {
 
 
 
-            <button className='form_button' disabled={!dirty || !isValid} type="submit">Checkout</button>
+            <button className='form_button' disabled={!dirty || !isValid} type="submit">Post</button>
 
           </Form>
 

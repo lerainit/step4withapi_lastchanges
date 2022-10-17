@@ -43,3 +43,16 @@
     gap:15px;
     align-items: center;
 }
+.comments_container{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.comment_user_name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.comment_user_text{
+    font-size: 16px;
+    font-weight: 400;
+}

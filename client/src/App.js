@@ -14,9 +14,6 @@ import { setSubscribersAC } from './store/subscribers/actionCreators';
 
 
 
-
-
-
 const App = () => {
   const dispatch = useDispatch()
   const modal = useSelector(store => store.modal.value)
