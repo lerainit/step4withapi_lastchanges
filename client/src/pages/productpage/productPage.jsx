@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../componentns/card/productCard'
+import Card from '../../componentns/card/userPostCard'
 import { useSelector} from 'react-redux'
 import { shallowEqual } from 'react-redux'
 import UserHeader from '../../componentns/userheader/userheader'
