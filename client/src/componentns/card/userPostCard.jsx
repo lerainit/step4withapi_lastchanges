@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './productCard.module.scss'
+import styles from './userCard.module.scss'
 import { useSelector, useDispatch } from 'react-redux';
 import { openModalAC } from '../../store/modal/actionCreators';
 import PropTypes from 'prop-types'

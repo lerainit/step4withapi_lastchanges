@@ -1,6 +1,6 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import ProductPage from './pages/productpage/productPage';
+import UserPage from './pages/userpage/userPage';
 import NotFoundPage from './pages/notfoundpage/notfoundpage';
 import PostsPage from './componentns/posts/postsPage';
 
@@ -15,9 +15,9 @@ const index2 =1
      
         <Routes>
             <Route path='/' element={<PostsPage />   } />
-           <Route path='/user2' element={<ProductPage index={index1} id ={id1}/>} />
-           <Route path='/posts' element={<ProductPage  />} />
-           <Route path='/user1' element={<ProductPage index={index2} id ={id2}/>}/>
+           <Route path='/user2' element={<UserPage index={index1} id ={id1}/>} />
+           <Route path='/posts' element={<UserPage  />} />
+           <Route path='/user1' element={<UserPage index={index2} id ={id2}/>}/>
            <Route path='*' element={<NotFoundPage />} />
          </Routes>
 

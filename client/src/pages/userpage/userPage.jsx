@@ -6,7 +6,7 @@ import UserHeader from '../../componentns/userheader/userheader'
 
 
 
-const ProductPage = (props) => {
+const UserPage = (props) => {
 
      const productsArr = useSelector(store => store.products.value, shallowEqual)
      const userIndex = props.index
@@ -23,4 +23,4 @@ const ProductPage = (props) => {
      )
 
 }
-export default ProductPage
+export default UserPage

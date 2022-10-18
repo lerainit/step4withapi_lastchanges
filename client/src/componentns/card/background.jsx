@@ -1,6 +1,6 @@
 import React from "react";
 import {  useSelector } from "react-redux";
-import styles from './productCard.module.scss'
+import styles from './userCard.module.scss'
 
 
 
