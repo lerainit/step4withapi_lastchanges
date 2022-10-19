@@ -11,7 +11,7 @@ export const setBackgroundAC =()=> async (dispatch)=> {
             localStorage.setItem(` products`,JSON.stringify( data))
                
              
-                dispatch({ type:setBackground})
+                dispatch({ type:setBackground,})
             
   }
     
@@ -21,7 +21,7 @@ export const setBackgroundAC =()=> async (dispatch)=> {
         }}
         else{
             dispatch({type:setBackground})
-        }
+       }
 
 }
 

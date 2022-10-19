@@ -1,7 +1,7 @@
 import { incrementLikes, decrementLikes, setCounter } from "./actions";
 
 const initialValue = {
-  counter: JSON.parse(localStorage.getItem('products')),
+  counter: JSON.parse(localStorage.getItem('counter')),
   isLoading: true
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, Formik, Form, ErrorMessage } from "formik";
-import { useDispatch } from "react-redux";
+import { useDispatch,useSelector } from "react-redux";
 import * as yup from 'yup'
 import { addCommentsAC } from "../../store/comments/actionCreators";
 import { setProducts } from "../../store/products/actions";
@@ -9,8 +9,11 @@ import { setComments } from "../../store/comments/actions";
 
 
 
+
 const CommentsForm = (props) => {
   const dispatch = useDispatch()
+
+  const comments = useSelector(store =>store.comments.value)
 
   let initialValues = {
     comment: '',
@@ -43,8 +46,10 @@ const CommentsForm = (props) => {
           },
           body: JSON.stringify({ comment:{userIndex:props.userIndex,text: values.comment}, userIndex: props.userIndex })
         }).then(res => res.json())
-        dispatch({ type: setComments })
-        dispatch(addCommentsAC({ comment:{userIndex:props.userIndex,text: values.comment}, userIndex: props.userIndex, index: props.index }))
+    
+        dispatch(addCommentsAC({ comment:{userIndex:props.userIndex,text: values.comment}, userIndex: props.userIndex, index: props.index ,comments:comments}))
+    
+       dispatch({type:setComments,payload:comments})
         dispatch({ type: setProducts })
         dispatch({ type: setCounter })
 

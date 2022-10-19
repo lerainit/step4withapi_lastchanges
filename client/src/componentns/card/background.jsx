@@ -5,12 +5,12 @@ import styles from './userCard.module.scss'
 
 
 const Background =({handleClick,comments,index,userIndex}) =>{
-    const productsArr= useSelector(store => store.counter.counter)
+    const postsArr= useSelector(store => store.counter.counter)
 
-  const products = productsArr[userIndex].posts
+  const posts = postsArr[userIndex].posts
 
    
-    let counter =products[index].likes
+    let counter =posts[index].likes
   
 
 return(

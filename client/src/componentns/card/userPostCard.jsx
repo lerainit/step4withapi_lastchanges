@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './userCard.module.scss'
 import { useSelector, useDispatch } from 'react-redux';
 import { openModalAC } from '../../store/modal/actionCreators';
@@ -8,19 +8,19 @@ import { hideBackgroundAC } from '../../store/cardBackground/actionCreators';
 import Background from './background';
 import { setProductsAC } from '../../store/products/actionCreator';
 import { setUserIndexAC } from '../../store/userIndex/actionCreators'
+import { setCommentsAC } from '../../store/comments/actionCreators';
 
 const Card = (props) => {
 
-  const productsArr = useSelector(store => store.products.value)
+  const dispatch = useDispatch();
+ 
 
-  const posts = useSelector(store => store.counter.counter)
+  const posts = useSelector(store => store.comments.value)
 
   const userIndex = props.userIndex
 
-  const products = productsArr[userIndex].posts
 
   const userPosts = posts[userIndex].posts
-  const dispatch = useDispatch();
 
   const id = props.id
   const index = props.index
@@ -47,6 +47,7 @@ const Card = (props) => {
         {storeBackground &&
           <Background handleClick={() => {
             dispatch(openModalAC())
+            dispatch(setCommentsAC())
             dispatch(setUserIndexAC(userIndex))
             dispatch({ type: 'SET_VALUE_INDEX', payload: index })
           }

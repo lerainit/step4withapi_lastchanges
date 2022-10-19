@@ -8,9 +8,9 @@ import BackButton from '../backbutton/backbutton'
 const Navigation = () => {
 
 const users= useSelector(store => store.users.value)
-    //const users= JSON.parse(localStorage.getItem('users'))
+    
 
-    console.log(users)
+  
   
     const user1 = users[0]
     const user2 = users[1]

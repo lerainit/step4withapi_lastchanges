@@ -23,7 +23,7 @@ if(!localStorage.getItem('products')){
     }
 }
    else{
-      dispatch({type:setProducts,payload:[]})
+     dispatch({type:setProducts,payload:[]})
    }
 
 } 

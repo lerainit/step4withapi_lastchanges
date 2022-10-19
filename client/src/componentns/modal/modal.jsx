@@ -19,7 +19,8 @@ const Modal = () => {
   const userIndex1 = useSelector(store => store.userIndex.value)
   const user = users[userIndex1]
   const products = productsArr[userIndex1].posts
-
+  const postsArr = useSelector(store => store.comments.value)
+  const userPosts = postsArr[userIndex1].posts
   let counter = products[index].likes
 
   return (
@@ -35,7 +36,7 @@ const Modal = () => {
         </div>
         <img className={styles.modal_img} src={products[index].url} alt="post" />
         <div className={styles.comments}>
-          {products[index].comments.map(({userIndex,text}) =>   <div className={styles.comment_container}><div className={styles.user_container}><img className={styles.comment_user_img} src={users[userIndex].url} alt="user" /> <h3>{users[userIndex].name}</h3></div><h3 className={styles.comment}>{text}</h3></div>)}
+          {userPosts[index].comments.map(({userIndex,text}) =>   <div className={styles.comment_container}><div className={styles.user_container}><img className={styles.comment_user_img} src={users[userIndex].url} alt="user" /> <h3>{users[userIndex].name}</h3></div><h3 className={styles.comment}>{text}</h3></div>)}
           <h3><span className={styles.modal_span}>Likes</span>{counter}</h3>
 
           <svg onClick={() => {

@@ -41,7 +41,7 @@ index = 1
 })
 
 
-console.log(users)
+
 
             return {value:JSON.parse(localStorage.getItem('users')),isLoading:false}
             }
